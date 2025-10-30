@@ -1,0 +1,82 @@
+:root {
+  --grey: rgb(202, 202, 197);
+  --blue: rgb(59, 98, 190);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(5, 2, 44);
+  color: var(--grey);
+  font-family: "Philosopher", sans-serif;
+  display: grid;
+  grid-template-columns: 0.25fr 300px 3fr 0.25fr;
+  grid-template-areas:
+    "header header header header"
+    " . nav main . ";
+}
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 2rem;
+  font-family: "Genos", sans-serif;
+  color: rgb(152, 149, 149);
+}
+header p {
+  text-decoration: overline var(--blue);
+}
+.sidenav {
+  grid-area: nav;
+  width: 300px;
+  height: 90vh;
+  position: sticky;
+  top: 50px;
+  padding: 1rem;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border: 3px solid transparent;
+  border-radius: 60px;
+  background: linear-gradient(var(--gradient-blue)) padding-box,
+    conic-gradient(from var(--neon-deg), var(--gradient-neon)) border-box; /* background gradient & border gradient */
+  animation: neon 10s infinite; /* border animation */
+}
+.nav-menu ul {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-menu svg {
+  width: 30px;
+  height: 30px;
+}
+.nav-menu span {
+  font-weight: 700;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--grey);
+  svg {
+    fill: var(--grey);
+  }
+}
+a:hover {
+  color: var(--blue);
+  svg {
+    fill: var(--blue);
+  }
+}
