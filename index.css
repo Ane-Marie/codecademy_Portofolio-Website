@@ -59,6 +59,25 @@ header p {
     conic-gradient(from var(--neon-deg), var(--gradient-neon)) border-box; /* background gradient & border gradient */
   animation: neon 10s infinite; /* border animation */
 }
+/* profile picture eye movement: */
+#anchor {
+  width: 150px;
+  position: relative;
+}
+#eyes,
+#eyes img {
+  position: absolute;
+}
+.left-eye {
+  width: 13px;
+  bottom: 94px;
+  left: 49px;
+}
+.right-eye {
+  width: 13px;
+  bottom: 94px;
+  left: 82px;
+}
 .nav-menu ul {
   margin-top: 3rem;
   display: flex;
