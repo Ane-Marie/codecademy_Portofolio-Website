@@ -252,3 +252,157 @@ main {
 .skills-card li {
   list-style: inside square;
 }
+
+@media only screen and (max-width: 75rem /* 1200px */) {
+  body {
+    grid-template-columns: 0.5fr 300px 3fr 0.5fr;
+  }
+  .my-projects {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .projects-card {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 64rem /* 1024px */) {
+  body {
+    grid-template-columns: 0.25fr 250px 3fr 0.25fr;
+  }
+  .sidenav {
+    width: 250px;
+  }
+  #anchor {
+    width: 100px;
+  }
+  .left-eye {
+    width: 8px;
+    bottom: 64px;
+    left: 34px;
+  }
+  .right-eye {
+    width: 8px;
+    bottom: 64px;
+    left: 55px;
+  }
+  .nav-menu svg {
+    width: 20px;
+    height: 20px;
+  }
+  .my-projects {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .projects-card {
+    width: 350px;
+    height: 200px;
+  }
+  .projects-card-subtitle {
+    margin-bottom: 7px;
+    font-size: 0.5rem;
+  }
+  .projects-card-info {
+    font-size: 0.7rem;
+    margin: 7px 0;
+  }
+}
+
+@media only screen and (max-width: 50rem /* 800px */) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: unset;
+    bottom: 0px;
+    padding: 0.5rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 0px;
+    z-index: 2;
+  }
+  .sidenav h2 {
+    display: none;
+  }
+  #anchor {
+    width: 50px;
+  }
+  .left-eye {
+    width: 4px;
+    bottom: 34px;
+    left: 16.5px;
+  }
+  .right-eye {
+    width: 4px;
+    bottom: 34px;
+    left: 27.5px;
+  }
+  .nav-menu ul {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-menu a {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .nav-menu svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 38rem /* 608px */) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: unset;
+    bottom: 0px;
+    padding: 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 0px;
+    z-index: 2;
+  }
+  .sidenav h2,
+  .profile-pic {
+    display: none;
+  }
+  .nav-menu ul {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-menu a {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .nav-menu svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 28rem /* 448px */) {
+  .nav-menu svg {
+    display: none;
+  }
+}
