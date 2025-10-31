@@ -1,0 +1,173 @@
+:root {
+  --grey: rgb(202, 202, 197);
+  --blue: rgb(59, 98, 190);
+  --gradient-neon: blue, red, purple, green, blue; /* border gradient */
+  --gradient-blue: rgb(15, 15, 47), rgb(4, 25, 91);
+}
+@property --neon-deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg; /* border animation start degree */
+}
+@keyframes neon {
+  100% {
+    --neon-deg: 360deg; /* border animation full circle */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+body {
+  background-color: rgb(5, 2, 44);
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+}
+header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: "Genos", sans-serif;
+  color: rgb(152, 149, 149);
+}
+header button {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  background-color: rgb(4, 25, 91);
+  color: var(--blue);
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.header-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header-name p {
+  text-decoration: overline var(--blue);
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 1rem;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 0.5rem;
+  border: 2px solid transparent;
+  border-radius: 0 100vw 100vw 0;
+  border-left: none;
+  background: linear-gradient(var(--gradient-blue)) padding-box,
+    conic-gradient(from var(--neon-deg), var(--gradient-neon)) border-box; /* background gradient & border gradient */
+  animation: neon 10s infinite;
+}
+.socials a {
+  width: 64px;
+  height: 64px;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 255, 0.5);
+}
+.socials a svg {
+  height: 32px;
+  fill: blue;
+}
+.socials a::before {
+  content: attr(social-platform);
+  position: absolute;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--grey);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 255, 0.3);
+  transform: translateX(30px) rotate(25deg);
+  opacity: 0;
+  transition: 400ms ease;
+}
+.socials a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: translateX(0) rotate(25deg);
+  opacity: 0;
+}
+.socials a:hover::before {
+  transform: translateX(55px) rotate(0deg);
+  opacity: 1;
+}
+.socials a:hover::after {
+  transform: translateX(42px) rotate(0deg);
+  opacity: 1;
+}
+
+.contact {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-left: 14rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 2px solid transparent;
+  border-radius: 70vw 0vw 70vw 0vw;
+  background: linear-gradient(var(--gradient-blue)) padding-box,
+    conic-gradient(from var(--neon-deg), var(--gradient-neon)) border-box; /* background gradient & border gradient */
+  animation: neon 10s infinite;
+}
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.contact-form {
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+input,
+textarea {
+  background-color: var(--grey);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+textarea {
+  height: 150px;
+  grid-column: 1 / span2;
+}
+[name*="subject"] {
+  grid-column: 1 / span2;
+}
+.contact-form button {
+  grid-column: 1 / span2;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: black;
+  color: var(--grey);
+  box-shadow: 0 5px 10px rgba(0, 0, 255, 1);
+  max-width: 30%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
