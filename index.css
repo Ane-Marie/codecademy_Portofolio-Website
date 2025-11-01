@@ -255,7 +255,7 @@ main {
   list-style: inside square;
 }
 
-@media only screen and (max-width: 75rem /* 1200px */) {
+@media (max-width: 75rem /* 1200px */) {
   body {
     grid-template-columns: 0.5fr 300px 3fr 0.5fr;
   }
@@ -268,7 +268,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 64rem /* 1024px */) {
+@media (max-width: 64rem /* 1024px */) {
   body {
     grid-template-columns: 0.25fr 250px 3fr 0.25fr;
   }
@@ -309,7 +309,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 50rem /* 800px */) {
+@media (max-width: 50rem /* 800px */) {
   body {
     display: flex;
     flex-direction: column;
@@ -323,7 +323,6 @@ main {
     padding: 0.5rem 1rem;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
     gap: 0.5rem;
     border: none;
     border-radius: 0px;
@@ -362,7 +361,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 38rem /* 608px */) {
+@media (max-width: 38rem /* 608px */) {
   .sidenav {
     justify-content: center;
   }
@@ -375,8 +374,60 @@ main {
   }
 }
 
-@media only screen and (max-width: 28rem /* 448px */) {
+@media (max-width: 28rem /* 448px */) {
   .nav-menu svg {
     display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 31rem /* 496px */) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: unset;
+    bottom: 0px;
+    padding: 0.5rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 0px;
+    z-index: 2;
+  }
+  .sidenav h2 {
+    display: none;
+  }
+  #anchor {
+    width: 50px;
+  }
+  .left-eye {
+    width: 4px;
+    bottom: 34px;
+    left: 16.5px;
+  }
+  .right-eye {
+    width: 4px;
+    bottom: 34px;
+    left: 27.5px;
+  }
+  .nav-menu ul {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-menu a {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .nav-menu svg {
+    width: 20px;
+    height: 20px;
   }
 }

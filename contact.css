@@ -172,7 +172,7 @@ textarea {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 75rem /* 1200px */) {
+@media (max-width: 75rem /* 1200px */) {
   .contact {
     padding-top: 1rem;
     padding-left: 12rem;
@@ -180,7 +180,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 64rem /* 1024px */) {
+@media (max-width: 64rem /* 1024px */) {
   .socials {
     gap: 3rem;
   }
@@ -196,7 +196,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 50rem /* 800px */) {
+@media (max-width: 50rem /* 800px */) {
   .socials {
     font-size: 0.8rem;
   }
@@ -214,7 +214,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 44rem /* 704px */) {
+@media (max-width: 44rem /* 704px */) {
   .socials a {
     width: 54px;
     height: 54px;
@@ -231,7 +231,7 @@ textarea {
     border-radius: 70vw 70vw 70vw 0vw;
   }
 }
-@media only screen and (max-width: 38rem /* 608px */) {
+@media (max-width: 38rem /* 608px */) {
   body {
     font-size: 0.75rem;
   }
